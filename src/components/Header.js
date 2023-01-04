@@ -1,11 +1,11 @@
 import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-export default function Header() {
+export default function Header({count}) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Yapılacaklar</Text>
-      <Text style={styles.count}>0</Text>
+      <Text style={styles.count}>{count}</Text>
     </View>
   );
 }

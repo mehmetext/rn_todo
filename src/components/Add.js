@@ -22,7 +22,8 @@ export default function Add({add}) {
       <TouchableOpacity
         disabled={!(todo.trim() !== '')}
         onPress={() => {
-          add(todo);
+          add(todo.trim());
+          setTodo('');
         }}>
         <View
           style={todo.trim() !== '' ? styles.button : styles.disabledButton}>
