@@ -1,4 +1,6 @@
 # rn_todo
 
-![](app_images/img1.png)
-![](app_images/img2.png)
+<img src="app_images/img1.png" width="50%">
+<img src="app_images/img2.png" width="50%">
+<!-- ![]() -->
+<!-- ![]() -->
