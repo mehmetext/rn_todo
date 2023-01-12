@@ -1,14 +1,15 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
+import {deleteTodoD, toggleDoneD} from '../store/dispatch';
 
-export default function Todo({todo, toggleDone, handleDelete}) {
+export default function Todo({todo}) {
   return (
     <TouchableOpacity
       onLongPress={() => {
-        handleDelete(todo.id);
+        deleteTodoD(todo.id);
       }}
       onPress={() => {
-        toggleDone(todo.id);
+        toggleDoneD(todo.id);
       }}>
       <View style={todo.done ? styles.containerDone : styles.container}>
         <Text style={todo.done ? styles.textDone : styles.text}>

@@ -1,11 +1,16 @@
 import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {useTodos} from '../store/todos';
 
-export default function Header({count}) {
+export default function Header() {
+  const {todos} = useTodos();
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Yapılacaklar</Text>
-      <Text style={styles.count}>{count}</Text>
+      <Text style={styles.count}>
+        {todos.filter(todo => !todo.done).length}
+      </Text>
     </View>
   );
 }

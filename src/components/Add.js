@@ -6,8 +6,9 @@ import {
   View,
 } from 'react-native';
 import React, {useState} from 'react';
+import {addD} from '../store/dispatch';
 
-export default function Add({add}) {
+export default function Add() {
   const [todo, setTodo] = useState('');
 
   return (
@@ -22,7 +23,7 @@ export default function Add({add}) {
       <TouchableOpacity
         disabled={!(todo.trim() !== '')}
         onPress={() => {
-          add(todo.trim());
+          addD(todo.trim());
           setTodo('');
         }}>
         <View
